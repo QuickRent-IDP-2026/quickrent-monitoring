@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'docker-containers'
+    static_configs:
+      - targets: ['auth-service:8000', 'data-service:8000', 'logic-service:8000']
